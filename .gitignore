@@ -1,0 +1,15 @@
+train_log
+.vscode
+__pycache__
+data
+test.py
+.DS_Store
+*.txt
+*.zip
+*.tif
+datasets
+seg_results
+saveFig
+gyh
+.idea
+
