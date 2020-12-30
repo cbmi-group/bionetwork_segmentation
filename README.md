@@ -1,4 +1,4 @@
-#Heuristic Optimization of Deep Learning Models for Segmentation of Intracellular Organelle Networks
+﻿#Heuristic Optimization of Deep Learning Models for Segmentation of Intracellular Organelle Networks
 
 This repo is for the paper "Heuristic Optimization of Deep Learning Models for Segmentation of Intracellular Organelle Networks" (under review)
 
@@ -8,7 +8,7 @@ This repo is for the paper "Heuristic Optimization of Deep Learning Models for S
 
 ### Data Preparation
 
-Two self-collect datasets can download from [IEEE Dataport](https://ieee-dataport.org/documents/fluorescence-microscopy-images-cbmi), including endoplasmic reticulum(ER) and mitochondrial(MITO). All images are 256X256 with manual anntotation.
+Two self-collect datasets can be downloaded from [IEEE Dataport](https://ieee-dataport.org/documents/fluorescence-microscopy-images-cbmi), including endoplasmic reticulum(ER) and mitochondrial(MITO). All images are 256X256 with manual anntotation.
 
 For ER dataset, the training, validation and testing sets consist of 157, 28 and 38 images, respectively. 
 For MITO dataset, the training, validation and testing sets consist of 165, 8 and 10 images, respectively. 
@@ -34,9 +34,9 @@ This tutorial depends on the following libraries:
 
 ### Training
 
-To train the model, you should save the datapath into a **_.txt** file and save in the dictionary **datasets**, then run ***_trainer.py** for different models.
+To train the model, you should save the datapath into a **_.txt** file and put it into the dictionary **datasets**, then run **trainer__(model).py** for different models.
 
-The loss funcitons are save in **models/optimize.py**
+The loss funcitons are saved in **models/optimize.py**
 
 Most models are trained for 30 epochs.
 
