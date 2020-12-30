@@ -1,4 +1,4 @@
-﻿#Heuristic Optimization of Deep Learning Models for Segmentation of Intracellular Organelle Networks
+﻿# Heuristic Optimization of Deep Learning Models for Segmentation of Intracellular Organelle Networks
 
 This repo is for the paper "Heuristic Optimization of Deep Learning Models for Segmentation of Intracellular Organelle Networks" (under review)
 
