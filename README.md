@@ -1,5 +1,5 @@
 
-﻿# Heuristic Optimization of Deep Learning Models for Segmentation of Intracellular Organelle Networks
+# Heuristic Optimization of Deep Learning Models for Segmentation of Intracellular Organelle Networks
 
 
 This repo is for the paper "Heuristic Optimization of Deep Learning Models for Segmentation of Intracellular Organelle Networks" (under review)
@@ -64,7 +64,7 @@ You can retrain the models  or directly download our pretraining models to get t
 ![archtecture search](https://github.com/YaoruLuo/bionetwork_segmentation/blob/master/images/Picture2.png)
 
 
-##Contributing 
+## Contributing 
 Code for this projects developped at CBMI Group (Computational Biology and Machine Intelligence Group).
 
 CBMI at National Laboratory of Pattern Recognition, INSTITUTE OF AUTOMATION, CHINESE ACADEMY OF SCIENCES
