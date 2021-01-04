@@ -19,7 +19,7 @@ Horizontal and vertical flipping as well as 90°/180°/270° rotation were used 
 
 ![The graphical scheme of our heuristic approach for fluorescence microscopy images](https://github.com/YaoruLuo/bionetwork_segmentation/blob/master/images/Picture1.png)
 
-We only need to output the probability of foreground since it is the binary image segmentation, we use sigmoid activation function makes sure that mask pixels are in \[0, 1\] range.
+We only need to output the probability of the foreground pixels for the binary image segmentation, so we use sigmoid activation function makes sure that mask pixels are in \[0, 1\] range.
 
 ---
 
@@ -42,16 +42,23 @@ Most models are trained for 30 epochs.
 
 
 ### Evaluation
-To test the segmentation performance, you should first run **inference.py** to save the prediction of the model, then run **evaluation.py** to get the different metrics scores such as IOU, F1 and others.
+To test the segmentation performance, you should first run **inference.py** to save the prediction, then run **valuation.py** to get different metrics scores such as IOU, F1 and others.
 
 
 ### Results
-You can train the models to get the rusuls in our paper or directly download our pretraining models.
+You can retrain the models  or directly download our pretraining models to get the results in our paper. 
 [PENet]()
 [U-Net]()
 [Deeplabv3+]()
 [UNetPlusPlus]()
 
-Use the trained model to do segmentation on test images.
 
 ![archtecture search](https://github.com/YaoruLuo/bionetwork_segmentation/blob/master/images/Picture2.png)
+
+
+##Contributing 
+Code for this projects developped at CBMI Group (Computational Biology and Machine Intelligence Group).
+
+CBMI at National Laboratory of Pattern Recognition, INSTITUTE OF AUTOMATION, CHINESE ACADEMY OF SCIENCES
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/cbmi-group/bionetwork_segmentation
