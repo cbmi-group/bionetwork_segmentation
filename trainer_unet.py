@@ -393,7 +393,7 @@ if __name__ == '__main__':
     opts["train_batch_size"] = 32
     opts["eval_batch_size"] = 32
     opts["optimizer"] = "SGD"
-    opts["loss_criterion"] = "binary_focal"
+    opts["loss_criterion"] = "focal"
     opts["lr"] = 0.01
     opts["lr_decay"] = 10
     opts["weight_decay"] = 0.0005

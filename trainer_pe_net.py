@@ -6,7 +6,8 @@ import sys
 import time
 from visdom import Visdom
 import torch.nn.functional as F
-
+import shutil
+import torch.nn as nn
 root_dir = os.path.abspath(os.path.dirname(__file__))
 sys.path.append(root_dir)
 sys.path.append(os.path.join(root_dir, "datasets"))

@@ -1,16 +1,10 @@
-# -*- coding:utf-8 -*-
 import torch.nn as nn
 import torch.optim as optim
-from models.networks import pdf_loss, semantic_consistency_loss
 from torch.autograd import Variable
 import torch
 import torch.nn.functional as F
-from models.loss_function.rmi.rmi import RMILoss
-import cv2
-import numpy as np
-import matplotlib.pyplot as plt
 
-def create_criterion(criterion="crossentropy", K=2, feature_dim=64):
+def create_criterion(criterion="crossentropy"):
     if criterion == "crossentropy":
         return nn.CrossEntropyLoss()
     elif criterion == "bce":
@@ -21,14 +15,8 @@ def create_criterion(criterion="crossentropy", K=2, feature_dim=64):
         return nn.L1Loss()
     elif criterion == "MSE":
         return nn.MSELoss()
-    elif criterion == "pixel_dist":
-        return pdf_loss()
-    elif criterion == "sc": # semantic consistency
-        return semantic_consistency_loss(K=K, feature_dim=feature_dim)
     elif criterion == "focal":
         return FocalLoss2d()
-    elif criterion == "rmi":
-        return RMILoss()
     elif criterion == "wbce":
         return weighted_edge_loss()
     elif criterion == "iou":
@@ -56,7 +44,6 @@ def get_lr(optimizer):
         return param_group['lr']
 
 
-
 class soft_iou_loss(nn.Module):
     def __init__(self):
         super(soft_iou_loss, self).__init__()
@@ -68,7 +55,6 @@ class soft_iou_loss(nn.Module):
         inter = torch.sum(torch.mul(pred, label), dim=-1, keepdim=False)
         unit = torch.sum(torch.mul(pred, pred) + label, dim=-1, keepdim=False) - inter
         return torch.mean(1 - inter / (unit + 1e-10))
-
 
 
 class FocalLoss2d(nn.Module):
@@ -137,15 +123,4 @@ class DiceLoss(nn.Module):
         dice = (2. * intersection.sum(1) + smooth) / (input.sum(1) + target.sum(1) + smooth)
         dice = 1 - dice.sum() / num
         return dice
-
-if __name__ == "__main__":
-    pred = torch.randn([2,1,4,4]).cuda()
-    pred = torch.sigmoid(pred)
-    label = torch.ones([2,1,4,4]).cuda()
-    # focal_loss = FocalLoss2d(2)
-    l_f = nn.BCELoss()
-    binary_focal_loss = BinaryFocalLoss()
-    loss_1 = l_f(pred, label)
-    loss_2 = binary_focal_loss(pred, label)
-    print('loss:', loss_2)
 

@@ -344,7 +344,7 @@ if __name__ == '__main__':
     opts['dataset_type'] = 'mito'
 
     opts["num_epochs"] = 30
-    opts["train_data_dir"] = "./datasets/train_mito_combineNoise_aug_v1.txt"
+    opts["train_data_dir"] = "./datasets/train_mito.txt"
     opts["eval_data_dir"] = "./datasets/test_mito.txt"
     opts["train_batch_size"] = 32
     opts["eval_batch_size"] = 32
