@@ -1,0 +1,10 @@
+torch==1.2.0
+torchvision==0.4.0
+requests
+visdom
+matplotlib
+scikit-learn
+tensorboard>=1.14
+future
+opencv-python
+pytest-shutil
