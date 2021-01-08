@@ -327,7 +327,7 @@ def train_eval_model(opts):
         epoch_acc, epoch_iou, epoch_f1, epoch_distance = eval_one_epoch(epoch, dataloaders_dict['eval'], unet_model, device, train_dir, log_file)
 
         val_iou.append('{:4f}'.format(epoch_iou.item()))
-        plot_val(val_iou, train_dir)
+        #plot_val(val_iou, train_dir)
 
         if best_acc < epoch_acc and epoch >= 3:
             best_acc = epoch_acc
