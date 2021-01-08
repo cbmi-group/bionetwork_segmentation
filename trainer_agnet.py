@@ -214,7 +214,7 @@ def train_eval_model(opts):
     model_dir = os.path.join(train_dir, "code_backup")
     os.makedirs(model_dir, exist_ok=True)
     if resume is None and os.path.exists(log_file): os.remove(log_file)
-    shutil.copy("./models/AGNet/code/core/models.py", os.path.join(model_dir, "agnet.py"))
+    shutil.copy("./models/agnet.py", os.path.join(model_dir, "agnet.py"))
     shutil.copy("./trainer_agnet.py", os.path.join(model_dir, "trainer_agnet.py"))
     shutil.copy("./datasets/dataset.py", os.path.join(model_dir, "dataset.py"))
 

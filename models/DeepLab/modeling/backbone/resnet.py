@@ -5,7 +5,7 @@ import torch.utils.model_zoo as model_zoo
 import sys
 sys.path.append('/data/ldap_shared/home/s_lyr/code/er-network-segmentation/models/DeepLap')
 
-from modeling.sync_batchnorm.batchnorm import SynchronizedBatchNorm2d
+from models.DeepLab.modeling.sync_batchnorm.batchnorm import SynchronizedBatchNorm2d
 
 
 class Bottleneck(nn.Module):
